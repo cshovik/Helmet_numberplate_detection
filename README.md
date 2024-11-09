@@ -20,6 +20,22 @@ https://universe.roboflow.com/huynhs-space/helmet-detection-and-license-plate-re
 - All the graphs and result are also uploaded
 - result.csv: It is the trainning results of epochs in csv format
 
+##YOLO v10 - Key Algorithms and Architecture
+- Cross Stage Partial Networks (CSPNet): CSPNet helps YOLO v10 achieve efficient layer aggregation and enhanced learning capacity. This reduces computational cost while maintaining high accuracy, which is essential for recognizing small details like helmets and license plates.
+- Anchor-Free Detection: YOLO v10 reduces reliance on predefined anchor boxes, simplifying the model structure and improving detection precision for small or irregularly shaped objects. This is particularly useful for the helmet and license plate detection tasks, where objects can vary greatly in size and shape.
+- Multi-Scale Training: This technique allows the model to generalize better across various resolutions. It trains the model to detect objects at different scales, improving robustness in real-world conditions where objects may appear in diverse sizes, distances, and perspectives.
+- Non-Maximum Suppression (NMS): YOLO v10 incorporates optimized NMS to filter overlapping bounding boxes, retaining only the most confident detections. This is crucial in scenarios where multiple objects are close together, such as helmets on multiple riders or overlapping license plates.
+- Data Augmentation: YOLO v10 employs advanced data augmentation techniques. These augmentations enable the model to perform better in varied environments, improving real-world accuracy.
+     - Mosaic Augmentation: Combines four images into one during training, improving the model's ability to detect small objects.
+     - Random Cropping and Rotation: Helps the model learn to detect objects from various angles, increasing robustness.
+     - Random Cropping and Rotation: Helps the model learn to detect objects from various angles, increasing robustness.
+- Dynamic Model Configurations:YOLO v10 offers various configurations (like yolov10n, yolov10s, yolov10m, etc.) to provide a balance between speed and accuracy, allowing for adaptable performance across different hardware and detection tasks. This flexibility ensures the model is optimized for specific detection scenarios, whether high-speed detection or high-accuracy detection is prioritized.
+
+## Fine Tunning and parameters
+1) Learning Rate Schedule:
+    - Initial Learning Rate (lr0=0.01): The starting learning rate is set relatively high to accelerate the initial learning phase.
+    - Final Learning Rate (lrf=0.0001): The learning rate is gradually decreased to this final value, ensuring stability in the final stages of training and helping the model settle into an optimal minimum.
+
 ## Tech Stack
 **IDE**
 - Google Colab: Used as the development environment, with GPU acceleration for efficient model training and inference.
@@ -36,24 +52,6 @@ https://universe.roboflow.com/huynhs-space/helmet-detection-and-license-plate-re
 - Python 3.6 or higher
 - Google Collab or any Python based IDE
 - Google Colab or Jupyter Notebook
-
-
-**YOLO v10 - Key Algorithms and Architecture**
-- Cross Stage Partial Networks (CSPNet): CSPNet helps YOLO v10 achieve efficient layer aggregation and enhanced learning capacity. This reduces computational cost while maintaining high accuracy, which is essential for recognizing small details like helmets and license plates.
-- Anchor-Free Detection: YOLO v10 reduces reliance on predefined anchor boxes, simplifying the model structure and improving detection precision for small or irregularly shaped objects. This is particularly useful for the helmet and license plate detection tasks, where objects can vary greatly in size and shape.
-- Multi-Scale Training: This technique allows the model to generalize better across various resolutions. It trains the model to detect objects at different scales, improving robustness in real-world conditions where objects may appear in diverse sizes, distances, and perspectives.
-- Non-Maximum Suppression (NMS): YOLO v10 incorporates optimized NMS to filter overlapping bounding boxes, retaining only the most confident detections. This is crucial in scenarios where multiple objects are close together, such as helmets on multiple riders or overlapping license plates.
-- Data Augmentation: YOLO v10 employs advanced data augmentation techniques. These augmentations enable the model to perform better in varied environments, improving real-world accuracy.
-     - Mosaic Augmentation: Combines four images into one during training, improving the model's ability to detect small objects.
-     - Random Cropping and Rotation: Helps the model learn to detect objects from various angles, increasing robustness.
-     - Random Cropping and Rotation: Helps the model learn to detect objects from various angles, increasing robustness.
-- Dynamic Model Configurations:YOLO v10 offers various configurations (like yolov10n, yolov10s, yolov10m, etc.) to provide a balance between speed and accuracy, allowing for adaptable performance across different hardware and detection tasks. This flexibility ensures the model is optimized for specific detection scenarios, whether high-speed detection or high-accuracy detection is prioritized.
-
-**Fine Tunning and parameters**
-1) Learning Rate Schedule:
-    - Initial Learning Rate (lr0=0.01): The starting learning rate is set relatively high to accelerate the initial learning phase.
-    - Final Learning Rate (lrf=0.0001): The learning rate is gradually decreased to this final value, ensuring stability in the final stages of training and helping the model settle into an optimal minimum.
-
    
 **Installation**
 Clone the yolo v10 repository and set up the environment:
