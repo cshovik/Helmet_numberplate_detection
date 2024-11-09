@@ -124,7 +124,9 @@ for url in urls:
 
 ## Authors
 
-- [@SHOVIK CHAKRABORTY](https://github.com/cshovik)
+- [@SHOVIK CHAKRABORTYRA2211003011403](https://github.com/cshovik)
+- [@Moaz Alimi (RA2211003011348)]
+- [@Kush Kokate (RA2211003011382)]
 
 
 ## License
