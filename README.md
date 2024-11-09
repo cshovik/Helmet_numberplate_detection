@@ -53,6 +53,8 @@ https://universe.roboflow.com/huynhs-space/helmet-detection-and-license-plate-re
 1) Learning Rate Schedule:
     - Initial Learning Rate (lr0=0.01): The starting learning rate is set relatively high to accelerate the initial learning phase.
     - Final Learning Rate (lrf=0.0001): The learning rate is gradually decreased to this final value, ensuring stability in the final stages of training and helping the model settle into an optimal minimum.
+
+   
 **Installation**
 Clone the yolo v10 repository and set up the environment:
 ```bash
