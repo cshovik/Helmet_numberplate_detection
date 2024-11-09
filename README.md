@@ -20,7 +20,7 @@ https://universe.roboflow.com/huynhs-space/helmet-detection-and-license-plate-re
 - All the graphs and result are also uploaded
 - result.csv: It is the trainning results of epochs in csv format
 
-##YOLO v10 - Key Algorithms and Architecture
+## YOLO v10 - Key Algorithms and Architecture
 - Cross Stage Partial Networks (CSPNet): CSPNet helps YOLO v10 achieve efficient layer aggregation and enhanced learning capacity. This reduces computational cost while maintaining high accuracy, which is essential for recognizing small details like helmets and license plates.
 - Anchor-Free Detection: YOLO v10 reduces reliance on predefined anchor boxes, simplifying the model structure and improving detection precision for small or irregularly shaped objects. This is particularly useful for the helmet and license plate detection tasks, where objects can vary greatly in size and shape.
 - Multi-Scale Training: This technique allows the model to generalize better across various resolutions. It trains the model to detect objects at different scales, improving robustness in real-world conditions where objects may appear in diverse sizes, distances, and perspectives.
