@@ -35,7 +35,22 @@ https://universe.roboflow.com/huynhs-space/helmet-detection-and-license-plate-re
 1) Learning Rate Schedule:
     - Initial Learning Rate (lr0=0.01): The starting learning rate is set relatively high to accelerate the initial learning phase.
     - Final Learning Rate (lrf=0.0001): The learning rate is gradually decreased to this final value, ensuring stability in the final stages of training and helping the model settle into an optimal minimum.
-
+2) Batch Size (batch=8):
+    - A batch size of 8 is used, balancing memory usage and stability during training. Small batch sizes like this are often suitable for more stable convergence on limited hardware.
+3) Flip Augmentation:
+    - Vertical Flip (flipud=0.5) and Horizontal Flip (fliplr=0.5): These augmentations are applied with a probability of 50%, helping the model generalize better to different object orientations.
+4) Color Augmentation:
+    - Hue Shift (hsv_h=0.015): Allows hue variation of up to ±1.5%, which helps the model to adapt to different lighting conditions.
+    - Saturation Shift (hsv_s=0.7): Allows saturation variation of up to 70%, further enhancing the model’s ability to handle diverse lighting and color conditions.
+    - Brightness Shift (hsv_v=0.4): Allows brightness variation of up to 40%, making the model more robust to shadow or illumination changes.
+5) Mixup Augmentation (mixup=0.1):
+    - Mixup is a data augmentation technique where two images are blended together to create synthetic training data. This helps the model become more robust by learning from blended examples, which is especially helpful for detecting 
+      overlapping or partially obscured objects.
+7) Auto Augment (auto_augment=randaugment):
+    - Random augmentation strategies are applied, further improving the model's ability to generalize. randaugment applies random transformations to images, making the model more adaptable to various environments and conditions.
+8) Cosine Learning Rate Scheduler (cos_lr=True):
+    - A cosine learning rate scheduler is used to gradually decrease the learning rate in a cosine pattern, which helps prevent the model from getting stuck in suboptimal solutions and improves convergence.
+   
 ## Tech Stack
 **IDE**
 - Google Colab: Used as the development environment, with GPU acceleration for efficient model training and inference.
