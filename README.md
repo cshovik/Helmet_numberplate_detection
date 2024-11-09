@@ -13,6 +13,14 @@ https://universe.roboflow.com/huynhs-space/helmet-detection-and-license-plate-re
 - Image Detection: It can also perform detection on image
 - GPU-Accelerated Processing: Runs on Google Colab with Tesla T4 GPU, ensuring fast and efficient detection.
 
+## Model Performance Comparison
+
+| Metric       | Previous Performance | Current Performance | Improvement |
+|--------------|----------------------|---------------------|-------------|
+| mAP          | 83.2%                | 95.6%              | +12.4%      |
+| Precision    | 79.6%                | 95.6%              | +16.0%      |
+| Recall       | 78.8%                | 99.0%              | +20.2%      |
+
 
 ## Project Structure
 - Helmet_Number_Plate_Detection.ipynb: Jupyter notebook with main trainning  code only for detecting helmets and number plates using YOLO v10.
