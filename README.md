@@ -123,6 +123,18 @@ for url in urls:
 
 [MIT](https://github.com/cshovik/Gesture-Based-Computer-Control?tab=MIT-1-ov-file#readme)
 
-## Screenshot:
-![screenshot_619](https://github.com/user-attachments/assets/8d0b15f4-3b46-437e-a705-56d1ba11cde9)
+## Detection image:
+![WhatsApp Image 2024-09-19 at 22 41 48_bcdb3ce9](https://github.com/user-attachments/assets/953b20b3-a513-4aab-9760-c73e493adbfb)
+
+![WhatsApp Image 2024-09-19 at 22 38 17_dd9a0a80](https://github.com/user-attachments/assets/ea2b24c9-c7e1-48f1-8853-8385c6115cbf)
+
+![WhatsApp Image 2024-09-19 at 22 41 57_efb116d6](https://github.com/user-attachments/assets/eb0590b4-8d6c-490e-aad3-99071a777a8b)
+
+![img2](https://github.com/user-attachments/assets/97c2685f-8978-4f79-94fb-95087d6fdf02)
+
+![img5](https://github.com/user-attachments/assets/433aee6a-2af7-481d-87dd-612fa5ed8eb4)
+
+![img6](https://github.com/user-attachments/assets/963ad7bb-e56c-4eea-8fe4-cbd73574f884)
+
+
 
