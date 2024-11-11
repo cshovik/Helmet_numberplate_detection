@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Plate Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="https://videos.pexels.com/video-files/856077/856077-hd_1920_1080_24fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h2>License Plate Recognition</h2>
+    </header>
+
+    <div class="card">
+        {% if plate_text %}
+            <div class="detected-text">
+                Detected numberplate: {{ plate_text }}
+            </div>
+        {% endif %}
+
+        <div class="image-container">
+            {% if image_path and not processed_image_path %}
+                <img src="{{ url_for('static', filename=image_path.split('static/')[-1]) }}" alt="Uploaded Image" class="uploaded-image">
+            {% elif image_path and processed_image_path %}
+                <div class="result-images">
+                    <div>
+                        <h3>Original Image</h3>
+                        <img src="{{ url_for('static', filename=image_path.split('static/')[-1]) }}" class="processed-image" alt="Original Image">
+                    </div>
+                    <div>
+                        <h3>Processed Image for OCR</h3>
+                        <img src="{{ url_for('static', filename=processed_image_path.split('static/')[-1]) }}" class="processed-image" alt="Processed Image">
+                    </div>
+                </div>
+            {% else %}
+                <img src="{{ url_for('static', filename='placeholder.png') }}" alt="Placeholder Image" class="uploaded-image">
+            {% endif %}
+        </div>
+
+        <form action="/" method="post" enctype="multipart/form-data" class="form-buttons">
+            <label for="file" class="upload-btn">Upload Image</label>
+            <input type="file" name="file" id="file" required onchange="showUploadedFile(event)">
+            <button type="submit" class="detect-btn">Detect</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 made by cshovik. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showUploadedFile(event) {
+            const uploadedImage = document.querySelector('.uploaded-image');
+            uploadedImage.src = URL.createObjectURL(event.target.files[0]);
+            uploadedImage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
